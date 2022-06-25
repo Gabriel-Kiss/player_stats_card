@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Stats Card</title>
+    <link rel="icon" type="image/x-icon" href="/assets/faviconV2.png" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <h1 class="header">Player Stats Card</h1>
+      <section class="player-stats-section" id="playerStatsSection">
+        <div class="player-stats-card" id="playerStatsCard">
+          <div class="card-top-half">
+            <select name="players" id="playersDropdown">
+              <option selected disabled>Select a player...</option>
+            </select>
+            <div class="player-image-container">
+              <img
+                src="/assets/images/silhuette.png"
+                alt="Player Image"
+                class="player-image"
+                id="playerImage"
+                onerror="this.src='/assets/images/silhuette.png';"
+              />
+            </div>
+          </div>
+          <div class="team-logo"></div>
+          <div class="card-bottom-half">
+            <span class="player-name">Player Name</span>
+            <span class="player-position">Position</span>
+            <div class="player-stats">
+              <div class="stat" id="appereances">
+                <span class="stat-name">Appearances</span>
+                <span class="stat-value">--</span>
+              </div>
+              <div class="stat" id="goals">
+                <span class="stat-name">Goals</span>
+                <span class="stat-value">--</span>
+              </div>
+              <div class="stat" id="assists">
+                <span class="stat-name">Assists</span>
+                <span class="stat-value">--</span>
+              </div>
+              <div class="stat" id="goalsPerMatch">
+                <span class="stat-name">Goals per match</span>
+                <span class="stat-value">--</span>
+              </div>
+              <div class="stat" id="passesPerMinute">
+                <span class="stat-name">Passses per minute</span>
+                <span class="stat-value">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script type="module" src="app.js"></script>
+    </main>
+  </body>
+</html>

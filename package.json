@@ -1,0 +1,22 @@
+{
+  "name": "player_stats_card",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "css-compile": "sass --watch --no-source-map main.scss src/styles.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-Kiss/player_stats_card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabriel-Kiss/player_stats_card/issues"
+  },
+  "homepage": "https://github.com/Gabriel-Kiss/player_stats_card#readme",
+  "dependencies": {
+    "sass": "^1.52.3"
+  }
+}

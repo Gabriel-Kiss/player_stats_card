@@ -1,0 +1,163 @@
+//Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+//VARIABLES
+$white: #ffffff;
+$rose-red: #ec0050;
+$light-grey: #eaeaea;
+$indigo: #39003f;
+$source-sans-pro: "Source Sans Pro", sans-serif;
+
+//MIXINS
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin stats-font($family, $size, $color, $weight) {
+  color: $color;
+  font: {
+    family: $family;
+    size: $size;
+    weight: $weight;
+  }
+  letter-spacing: -0.6px;
+}
+
+@mixin stat-info {
+  align-items: center;
+  background-color: $light-grey;
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  margin-bottom: 1.5px;
+  padding: 10px;
+}
+
+@mixin shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+//RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main-container {
+  font-family: $source-sans-pro;
+  height: 100vh;
+  width: 100vw;
+
+  .header {
+    color: $rose-red;
+    font-family: $source-sans-pro;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    // position: relative;
+    text-align: center;
+  }
+
+  .player-stats-section {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+
+    .player-stats-card {
+      @include flex-column();
+      @include shadow();
+      height: 480px;
+      max-width: 240px;
+      position: relative;
+      width: 280px;
+
+      .card-top-half {
+        @include flex-column();
+        height: 50%;
+
+        #playersDropdown {
+          align-self: center;
+          background-color: #eaeaea;
+          border: none;
+          border-right: 10px solid transparent;
+          font-family: $source-sans-pro;
+          font-size: 0.9rem;
+          font-weight: 500;
+          height: 40px;
+          letter-spacing: -0.6px;
+          margin-top: 12px;
+          padding: 0 10px;
+
+          width: 90%;
+        }
+
+        .player-image-container {
+          background-image: url("/assets/images/pl_pattern.png");
+          // background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: 145% -5px;
+          height: 90%;
+          margin-top: 15px;
+          position: relative;
+
+          .player-image {
+            bottom: 0;
+            height: 95%;
+            margin-left: 5px;
+            position: absolute;
+          }
+        }
+      }
+
+      .team-logo {
+        align-self: flex-end;
+        background-color: $white;
+        background-image: url("/assets/images/teams_logo.png");
+        background-size: contain;
+        border-radius: 50%;
+        bottom: 42%;
+        height: 65px;
+        margin-right: 20px;
+        position: absolute;
+        width: 65px;
+      }
+
+      .card-bottom-half {
+        @include flex-column();
+        background-color: $rose-red;
+        height: 50%;
+        padding: 10px;
+
+        .player-name {
+          @include stats-font($source-sans-pro, large, $white, 400);
+        }
+
+        .player-position {
+          @include stats-font($source-sans-pro, small, $white, 400);
+        }
+
+        .player-stats {
+          @include flex-column();
+          margin-top: 10px;
+
+          .stat {
+            @include stat-info();
+            @include shadow();
+
+            .stat-name {
+              @include stats-font($source-sans-pro, small, $indigo, 500);
+            }
+
+            .stat-value {
+              @include stats-font($source-sans-pro, medium, $indigo, 700);
+            }
+          }
+        }
+      }
+    }
+  }
+}
