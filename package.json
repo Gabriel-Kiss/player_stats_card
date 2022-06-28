@@ -2,9 +2,8 @@
   "name": "player_stats_card",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
-    "css-compile": "sass --watch --no-source-map main.scss src/styles.css --style compressed"
+    "css-compile": "sass --watch --no-source-map main.scss styles.css --style compressed"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,6 @@
 //Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 //VARIABLES
 $white: #ffffff;
@@ -7,6 +8,7 @@ $rose-red: #ec0050;
 $light-grey: #eaeaea;
 $indigo: #39003f;
 $source-sans-pro: "Source Sans Pro", sans-serif;
+$unna: "Unna", serif;
 
 //MIXINS
 @mixin flex-column {
@@ -51,14 +53,17 @@ $source-sans-pro: "Source Sans Pro", sans-serif;
   font-family: $source-sans-pro;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 
   .header {
     color: $rose-red;
-    font-family: $source-sans-pro;
+    font-family: $unna;
     font-size: 3rem;
     margin-bottom: 20px;
-    // position: relative;
+    margin-top: 5px;
     text-align: center;
+    letter-spacing: -1px;
+    font-weight: 600;
   }
 
   .player-stats-section {
@@ -90,8 +95,13 @@ $source-sans-pro: "Source Sans Pro", sans-serif;
           letter-spacing: -0.6px;
           margin-top: 12px;
           padding: 0 10px;
-
           width: 90%;
+          &:focus {
+            border-color: transparent;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline-style: none;
+          }
         }
 
         .player-image-container {
@@ -142,7 +152,7 @@ $source-sans-pro: "Source Sans Pro", sans-serif;
 
         .player-stats {
           @include flex-column();
-          margin-top: 10px;
+          margin-top: 12px;
 
           .stat {
             @include stat-info();

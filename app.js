@@ -1,9 +1,12 @@
-
-
-
+// import data from "../assets/player-stats.json"
 async function getData () {
     try {
-        const response = await fetch('/assets/player-stats.json');
+        const response = await fetch(`/assets/player-stats.json`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        });
         const data = await response.json();
         return data;
     } catch (error) {
