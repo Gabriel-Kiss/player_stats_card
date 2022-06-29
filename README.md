@@ -1,4 +1,4 @@
-# PulseLive Coding Challenge - Player Stats Card
+# PulseLive - Player Stats Card
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Node has to be installed on your machine in order for this project to run.
 
 ### Local Machine
 
-To start with, open a terminal and clone this repo [player_stats_card](https://github.com/Gabriel-Kiss/player_stats_card.git) into your local machine.
+To start with, open a terminal and clone this repo into your local machine.
 
 #### To start the web app
 
@@ -25,3 +25,7 @@ To start with, open a terminal and clone this repo [player_stats_card](https://g
 - [Javascrip](https://www.javascript.com/)
 - [Node Js](https://nodejs.org/en/)
 - [Sass](https://sass-lang.com/)
+
+## Disclaimer
+
+None of the images used belong to me. Most have been provided by PulseLive, but a few have been downloaded from the web.
